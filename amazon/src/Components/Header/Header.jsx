@@ -1,4 +1,5 @@
 import React from 'react'
+import LowerHeader from './LowerHeader';
 import { FaSearch } from "react-icons/fa";
 import { BsSearch } from "react-icons/bs";
 import { BiCart } from "react-icons/bi";
@@ -57,12 +58,12 @@ function Header() {
           </div>
 
           
-          <div>
+          <div className={classes.threeComp}>
             {/* three components */}
             <a href="">
               <div>
-                <p>sign in</p>
-                <span>Acount and lists</span>
+                <p>Hello sign in</p>
+                <span>Account and lists</span>
               </div>
             </a>
             {/* orders */}
@@ -90,6 +91,7 @@ function Header() {
 
         </div>
       </div>
+      <LowerHeader/>
       </section>
   )
 }

@@ -39,8 +39,9 @@
     justify-content: center;
     border-radius:10px ;
     overflow: hidden;
-    width: 100%;
+    width: 80%;
     flex: 1;
+    
 
 }
 .search select,
@@ -56,7 +57,8 @@
 .search input{
     border: 1px solid white;
     width: 100%;
-    margin-right: -2px;
+    
+    
 }
 .search svg{
     padding: 10px;
@@ -81,18 +83,23 @@
     max-width: 450px;
     gap: 10px;
 }
+
 .order__container a{
     text-decoration: none;
     color: white;
     display: flex;
-
+    
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     min-width: 80px; /* Adjust as needed */
 }
 .order__container p{
-    font-size: 10px;
+    font-size: 12px;
 }
+/* .order__container span{
+    font-weight: bold;
+} */
  
 .language{
     width: 100px;
@@ -120,11 +127,56 @@
     left: 14px;
     color: orange;
 }
-.order__container a:hover,.order__container a div:hover, .delivery:hover, .logo__container a:hover, .logo__container ul li:hover{
+.order__container a:hover,.order__container a div:hover, .delivery:hover, .logo__container a:hover, .logo__container ul li:hover,.language:hover{
     border: 1px solid white;
     border-radius: 3px;
 }
-.order__container a {
-   
+.threeComp{
+    display: flex;
+    gap: 10px;
 }
+
+
+
+
+
+/* the lower container section */
+
+.lower__container{
+    background-color: #11213f;
+    color: white;
+
+}
+.lower__container ul{
+    display: flex;
+    list-style: none;
+    gap: 5px;
+}
+.lower__container ul li{
+    padding: 8px;
+    cursor: pointer
+}
+.lower__container ul li:first-child{
+    display: flex;
+    padding: 2px;
+    align-items: center;
+}
+@media screen and (max-width: 576px) {
+    .header__container {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .lower__container ul li:not(:first-child) {
+        display: none;
+    }
+
+    .language {
+        display: none;
+    }
+}
+
+
+
 
