@@ -4,6 +4,7 @@ import { FaSearch } from "react-icons/fa";
 import { BsSearch } from "react-icons/bs";
 import { BiCart } from "react-icons/bi";
 import { SlLocationPin } from "react-icons/sl";
+import { Link } from 'react-router-dom';
 
 import classes from "./Header.module.css"
 
@@ -13,9 +14,9 @@ function Header() {
       <div className={classes.header__container}>
         <div className={classes.logo__container}>
           {/* logo section*/}
-          <a href="/">
+          <Link to="/">
             <img src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="Amazon logo" />
-          </a>
+          </Link>
           <div className={classes.delivery}>
 
           {/* deilivery */}
@@ -60,19 +61,19 @@ function Header() {
           
           <div className={classes.threeComp}>
             {/* three components */}
-            <a href="">
+            <Link to="/Auth">
               <div>
                 <p>Hello sign in</p>
                 <span>Account and lists</span>
               </div>
-            </a>
+            </Link>
             {/* orders */}
-            <a href="">
+            <Link to="/Orders">
               <p>return</p>
               <span>& Orders</span>
-            </a>
+            </Link>
             {/* cart */}
-            <a href='' className={classes.cart}>
+            <Link to='/Cart' className={classes.cart}>
             <BiCart size={35}/>
 
             {/* icon */}
@@ -81,7 +82,7 @@ function Header() {
             </span>
 
 
-            </a>
+            </Link>
 
 
           </div>
