@@ -14,7 +14,7 @@ function Results() {
   const [results,setResults]=useState([])
   const {catagoryName}=useParams()
   console.log("Category from URL:", catagoryName);
-  
+
   
   useEffect(() => {
     console.log("Fetching from:", `${productUrl}/products/category/${catagoryName}`);
@@ -23,6 +23,8 @@ function Results() {
       .then((res) => {
         console.log("Fetched data:", res.data); // Debugging log
         setResults(res.data);
+        console.log(res.data)
+        
       })
       .catch((err) => {
         console.error("Error fetching products:", err);

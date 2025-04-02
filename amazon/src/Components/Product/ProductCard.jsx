@@ -1,14 +1,14 @@
 import React from 'react'
 import classes from "./Product.module.css"
 // import Product from './Product'
-import Link from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 
 function ProductCard({prouct}) {
     const {image, title, id, rating, price}=product;
   return (
     <div className={'${classes.card__container}'}>
-        <Link to={}>
+        <Link to={'/products/${id}'}>
             <img src={image} alt="" className={classes.img__container} />
 
         </Link>
